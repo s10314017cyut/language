@@ -1,0 +1,18 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+<title>Programming Language Encyclopedia</title>
+<meta charset=utf-8>
+<link rel=stylesheet href={% static 'main/css/main.css' %}>
+</head>
+<body>
+<h1>Wiki says--'Hellow World!'</h1>
+<p>{{message}}</p>
+<p>{{now}}</p>
+<a href={% url 'main:main' %}>回首頁</a>
+<br>
+<a href={% url 'wiki:about' %}>關於程式語言小百科</a>
+<img src={% static 'wiki/img/proglang.png' %} alt=程式語言影像>
+</body>
+<html>

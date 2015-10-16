@@ -1,0 +1,15 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+<title>Programming Language Encyclopedia</title>
+<meta charset=utf-8>
+<link rel=stylesheet href={% static 'main/css/main.css' %}>
+</head>
+<body>
+<h1>這裡是程式語言小百科</h1>
+<p>我們提供許多程式語言的相關知識，歡迎瀏覽</p>
+<a href={% url 'main:main' %}>回首頁</a><br>
+<a href={% url 'wiki:wiki' %}>前往wiki</a>
+</body>
+<html>
