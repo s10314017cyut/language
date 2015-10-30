@@ -18,6 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^init/',include('init.urls',namespace='init')),
     url(r'^main/',include('main.urls',namespace='main')),
     url(r'^wiki/',include('wiki.urls',namespace='wiki')),
     url(r'^wiki/about/',include('wiki.urls',namespace='wiki/about')),
