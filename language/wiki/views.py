@@ -1,10 +1,12 @@
 from django.shortcuts import render
+from wiki.models import Category, Page
 import datetime
 
 
 def wiki(request):
-    now=datetime.datetime.now()
-    context={'message':'Wiki is very great.','now':now}
+
+    categories = Category.objects.order_by('-likes')
+    context = {'categories':categories}
     return render(request,'wiki/wiki.html',context)
 
 

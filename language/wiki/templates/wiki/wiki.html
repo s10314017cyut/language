@@ -8,11 +8,22 @@
 </head>
 <body>
 <h1>Wiki says--'Hellow World!'</h1>
+{% if categories %}
+  <h2>程式語言類別：</h2>
+  <u1>
+   {% for category in categories %}
+     <li>{{category.name}}</li>
+   {% endfor %}
+  </u1>
+{% else %}
+  <p><strong>目前尚未設定程式語言類別。</strong>
+{% endif %}
 <p>{{message}}</p>
 <p>{{now}}</p>
 <a href={% url 'main:main' %}>回首頁</a>
 <br>
 <a href={% url 'wiki:about' %}>關於程式語言小百科</a>
+<br>
 <img src={% static 'wiki/img/proglang.png' %} alt=程式語言影像>
 </body>
 <html>
