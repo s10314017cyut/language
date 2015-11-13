@@ -10,11 +10,13 @@
 <h1>Wiki says--'Hellow World!'</h1>
 {% if categories %}
   <h2>程式語言類別：</h2>
-  <u1>
+  <table>
    {% for category in categories %}
-     <li>{{category.name}}</li>
+     <tr>
+     <td><a href={% url 'wiki:category' category.name %}>{{category.name}}</a></td>
+     </tr>
    {% endfor %}
-  </u1>
+  </table>
 {% else %}
   <p><strong>目前尚未設定程式語言類別。</strong>
 {% endif %}
